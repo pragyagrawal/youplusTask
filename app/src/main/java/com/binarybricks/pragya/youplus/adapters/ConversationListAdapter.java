@@ -29,7 +29,7 @@ public class ConversationListAdapter extends BaseAdapter {
 
     public ConversationListAdapter(Context context, List<ConversationData> conversationList) {
         this.conversationList = conversationList;
-        this.context= context;
+        this.context = context;
     }
 
     @Override
@@ -82,7 +82,7 @@ public class ConversationListAdapter extends BaseAdapter {
 
             // store the holder with the view.
             view.setTag(viewHolder);
-        }else {
+        } else {
             viewHolder = (ViewHolderItem) view.getTag();
         }
 
@@ -90,18 +90,23 @@ public class ConversationListAdapter extends BaseAdapter {
 
         //check if isLoading flag is true
         //if yes, display the loading bar and hide conversation, else vice-versa
-        if(conversationData.isLoading()){
+        if (conversationData.isLoading()) {
             viewHolder.llConversationItem.setVisibility(View.GONE);
             viewHolder.pbLoading.setVisibility(View.VISIBLE);
-        }else {
+        } else {
             viewHolder.pbLoading.setVisibility(View.GONE);
             viewHolder.llConversationItem.setVisibility(View.VISIBLE);
 
             viewHolder.tvFriendName.setText(conversationData.getFriendName());
             viewHolder.tvLastMessage.setText(conversationData.getLastMessage());
-            viewHolder.tvUnreadCount.setText(String.valueOf(conversationData.getUnreadCount()));
+            if (conversationData.getUnreadCount() > 0) {
+                viewHolder.tvUnreadCount.setVisibility(View.VISIBLE);
+                viewHolder.tvUnreadCount.setText(String.valueOf(conversationData.getUnreadCount()));
+            } else {
+                viewHolder.tvUnreadCount.setVisibility(View.INVISIBLE);
+            }
             try {
-                viewHolder.tvTime.setText(CommonUtils.formatToYesterdayOrToday(context,conversationData.getLastMessageReceivedTime()));
+                viewHolder.tvTime.setText(CommonUtils.formatToYesterdayOrToday(context, conversationData.getLastMessageReceivedTime()));
             } catch (Exception e) {
                 e.printStackTrace();
             }

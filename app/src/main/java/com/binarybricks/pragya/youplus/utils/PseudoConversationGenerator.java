@@ -19,7 +19,7 @@ public class PseudoConversationGenerator {
     private static String[] friendName = {"John", "Andrew", "Mathew", "Adam", "Justin", "Micheal", "Lucy", "Anna", "Macy"};
     private static String[] messages = {"How are you ?",
             "I want to add you as a friend",
-            "Let's chat", "Call me", "Talk to you later", "In a meeting", "Hey..wassup!!", "Let's go Party", "I am offline"
+            "Let's chat", "Can you please call me", "Talk to you later", "In a meeting", "Hey..wassup!!", "Let's go Party", "I am offline"
     };
     private static String[] avatarImageUrl = {"https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTYYwscgxsNhCSBonaZqZeKE-mbnMSj9wGGlYP8yOTx96u4KhEw6Q",
             "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQpdoPqL6magv0lHaCR3r4yK0M69aIZRAJ0L7kGuchY6lF4ZhMfFfMdtA",
@@ -32,7 +32,7 @@ public class PseudoConversationGenerator {
             "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTjjRVhxwpnwV0vcwEhDRwqllsFIgq5QCJlRl1o2rmc1jGRXdrPPA"};
 
     private static int[] unreadCount = {2, 4, 5, 1, 7, 0, 0, 0, 2};
-    private static String[] receivedTime = {"8/2/2016", "8/1/2016", "8/1/2016", "8/2/2016", "6/2/2016", "8/1/2016", "8/1/2016", "8/2/2016", "7/22/2016"};
+    private static String[] receivedTime = {"8/3/2016", "8/1/2016", "8/1/2016", "8/3/2016", "6/2/2016", "8/1/2016", "8/1/2016", "8/3/2016", "7/22/2016"};
 
     public static ConversationData getPseudoConversation(long friendId, String conversationTime) {
         ConversationData conversationData = new ConversationData();

@@ -1,5 +1,6 @@
 package com.binarybricks.pragya.youplus;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -21,6 +22,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.OnItemClick;
 
 public class ConversationHomeActivity extends AppCompatActivity {
 
@@ -50,9 +52,18 @@ public class ConversationHomeActivity extends AppCompatActivity {
         conversationListAdapter = new ConversationListAdapter(ConversationHomeActivity.this, conversationList);
         lvConversationList.setAdapter(conversationListAdapter);
     }
+    @OnItemClick(R.id.lvConversationList)
+    void openConversationDetails(int position) {
+        //in ideal scenarios, we will have something like conversation id
+        // which can be used to fetch the conversation from the server.
+        ConversationData conversationData = conversationList.get(position);
+        Intent intent = new Intent(ConversationHomeActivity.this,ConversationDetails.class);
+        //add conversation id as intent extra
+        startActivity(intent);
+    }
     @OnClick(R.id.fabAdd)
-    public void addNewConversation(View v){
-        ConversationData newConversationData = PseudoConversationGenerator.getPseudoConversation(501,"8/3/2016");
+    void addNewConversation(View v){
+        ConversationData newConversationData = PseudoConversationGenerator.getPseudoConversation(501,"8/4/2016");
         newConversationData.setLoading(true);
         conversationList.add(newConversationData);
         sortConversation();

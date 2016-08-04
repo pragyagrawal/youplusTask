@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.binarybricks.pragya.youplus.ConversationDetails">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:layout_above="@+id/llAddMessage">
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:background="@drawable/circular_text_alternate"
+           android:text="Hi..How r u????"
+           android:textSize="18sp"
+           android:textColor="@android:color/white"
+           android:layout_margin="12dp"
+           android:padding="8dp"/>
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:background="@drawable/circular_text"
+           android:text="M doing fine. "
+           android:textSize="18sp"
+           android:layout_gravity="end"
+           android:textColor="@android:color/white"
+           android:layout_margin="12dp"
+           android:padding="8dp"/>
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:background="@drawable/circular_text"
+           android:text="How's u doing? :)"
+           android:textSize="18sp"
+           android:layout_gravity="end"
+           android:textColor="@android:color/white"
+           android:layout_margin="12dp"
+           android:padding="8dp"/>
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:background="@drawable/circular_text_alternate"
+           android:text="same here...Let's meet..!!"
+           android:textSize="18sp"
+           android:textColor="@android:color/white"
+           android:layout_margin="12dp"
+           android:padding="8dp"/>
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="4dp"
+        android:id="@+id/llAddMessage"
+        android:orientation="horizontal">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:layout_margin="4dp"
+            android:hint="Type a message"/>
+        <Button
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical"
+
+            android:layout_margin="8dp"
+            android:background="@drawable/plus_icon"/>
+    </LinearLayout>
+</RelativeLayout>
