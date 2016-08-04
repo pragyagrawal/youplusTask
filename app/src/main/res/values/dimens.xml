@@ -1,0 +1,17 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="conversationDivider">6dp</dimen>
+    <dimen name="conversationListMargin">4dp</dimen>
+    <dimen name="addConversationMargin">16dp</dimen>
+    <dimen name="progressMargin">8dp</dimen>
+    <dimen name="conversationItemPadding">8dp</dimen>
+    <dimen name="conversationItemAvtarSize">80dp</dimen>
+    <dimen name="conversationItemContentMargin">8dp</dimen>
+    <dimen name="conversationItemNameMargin">2dp</dimen>
+    <dimen name="conversationItemNameSize">20sp</dimen>
+    <dimen name="conversationItemMessageSize">16sp</dimen>
+    <dimen name="conversationItemMessageMargin">8dp</dimen>
+    <dimen name="conversationItemUnreadCountWidth">20dp</dimen>
+</resources>
